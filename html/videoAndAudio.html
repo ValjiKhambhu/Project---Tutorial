@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSite using Video and Audio</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            height: 15vh;
+            background-color: antiquewhite;
+        }
+
+        .buttons{
+            height: 10vh;
+            width: 15vw;
+            margin-top: 2.5vh;
+            background-color: aquamarine;
+            border: 1px solid ;
+        }
+
+        iframe{
+            height: 80vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <div class="head">
+            <button class="buttons" onclick="videos();">Videos</button>
+            <button class="buttons" onclick="audio();">Audio</button>
+        </div>
+    </head>
+    <body>
+        <iframe src="videos.html" frameborder="0" ></iframe>
+    </body>
+    <script>
+        function videos(){
+            document.getElementsByTagName("iframe")[0].setAttribute('src', 'videos.html');
+        }
+
+        function audio(){
+            document.getElementsByTagName("iframe")[0].setAttribute('src', 'audios.html');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<title> registration forn </title>
+
+	<script>
+		function check()
+		{
+			var a=document.getElementById("txtpassword").value;
+			var b=document.getElementById("txtrepassword").value;
+			var c=document.getElementById("error");
+
+			if(a!=b)
+			{
+				document.getElementById("txtpassword").value="";
+				document.getElementById("txtrepassword").value="";
+				//alert("password not same");
+				c.innerHTML="password is not match";
+				document.getElementById("txtpassword").focus();
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<form>
+		<table>
+			<caption>
+				<h1> registration form </h1>
+			</caption>
+			<tr>
+				<td> name </td>
+				<td> <input type="text"> </td>
+			</tr>
+
+			<tr>
+				<td> email </td>
+				<td> <input type="email"></td>
+			</tr>
+
+			<tr>
+				<td> phone </td>
+				<td> <input type="tel"></td>
+			</tr>
+
+			<tr>
+				<td> gender </td>
+				<td> <input type="radio" name="g"> male <input type="radio" name="g"> female </td>
+			</tr>
+
+			<tr>
+				<td>course</td>
+				<td>
+					<select>
+						<option>bca</option>
+						<option>bba</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td > password</td>
+				<td> <input type="password" id="txtpassword"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><p id="error" style="color:red;"></p></td>
+			</tr>
+
+			<tr>
+				<td >re-type password</td>
+				<td> <input type="password" id="txtrepassword"></td>
+			</tr>
+
+			<tr>
+				<td>adddress</td>
+				<td><textarea></textarea></td>
+			</tr>
+
+			<tr>
+				<td><input type="checkbox"></td>
+				<td> i agree terms & condition </td>
+			</tr>
+
+			<tr>
+				<td><button type="submit" value="submit" onclick="return check()">submit</button></td>
+				<td><input type="reset" value="reset"></td>
+				<td><input type="button" value="cancel"></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+
+</html>
